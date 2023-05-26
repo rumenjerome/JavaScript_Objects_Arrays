@@ -55,3 +55,21 @@ return newSentence
 }
 
 reverseString(sentence)
+
+// Exercise 4 Section
+console.log("EXERCISE 4:\n==========\n");
+
+let csvData = "name,age\nFrodo,50\nSam,38\nMerry,36\nPippin,26";
+let rows = csvData.split("\n");
+let headers = rows[0].split(",");
+let hobbitArr = [];
+
+for (i=1; i < rows.length; i++) {
+let objSplit = rows[i].split(',');
+let obj = {}
+    obj[headers[0]] = objSplit[0]
+    obj[headers[1]] = objSplit[1]
+    hobbitArr.push(obj)
+}
+    console.log(hobbitArr);
+
